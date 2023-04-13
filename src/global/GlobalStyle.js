@@ -38,6 +38,25 @@ const GlobalStyle = styled.createGlobalStyle `
     button, a {
         font-family: inherit;
     }
+
+    main {
+        max-width: 140rem;
+        margin: 0 auto;
+        padding: 4rem;
+        opacity: 1rem;
+    }
+
+    @media (max-width: 1600px) {
+        html {
+            font-size: 55%
+        }
+    }
+
+    @media (max-width: 1400px) {
+        html {
+            font-size: 45%
+        }
+    }
 `
 
 export default GlobalStyle

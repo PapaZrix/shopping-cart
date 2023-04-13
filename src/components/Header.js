@@ -11,8 +11,8 @@ const Header = ({ cartQty }) => {
                     <ShopName>SunnyLand</ShopName>
                 </Link>
                 <Nav>
-                    <NavLink to='/home'>Home</NavLink>
-                    <NavLink to='/shop'>Shop</NavLink>
+                    <NavbarLink to='/'>Home</NavbarLink>
+                    <NavbarLink to='/shop'>Shop</NavbarLink>
                     <CartContainer>
                         <NavLinkCart to='/cart'>
                             <FontAwesomeIcon icon={faShoppingCart} />
@@ -54,7 +54,7 @@ const Nav = styledComponents.nav `
     font-size: 2.4rem;
 `
 
-const NavLink = styledComponents(Link) `
+const NavbarLink = styledComponents(Link) `
     padding: 1rem;
     transition: transform 0.15s ease-in-out 0s;
     color: white;
