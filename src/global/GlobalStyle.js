@@ -44,7 +44,17 @@ const GlobalStyle = styled.createGlobalStyle `
         margin: 0 auto;
         padding: 4rem;
         opacity: 1rem;
+        animation: ease-in-out 0.5s fadeIn;
     }
+
+    // Animations 
+
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+
+    // Media Queries
 
     @media (max-width: 1600px) {
         html {

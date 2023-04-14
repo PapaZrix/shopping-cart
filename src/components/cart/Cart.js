@@ -24,9 +24,7 @@ const Cart = ({ items, changeQty, removeFromCart }) => {
             ) : (
                 <EmptyContainer>
                     <EmptyCart>YOUR CART IS EMPTY</EmptyCart>
-                    <span style={{
-                        fontSize: '5.5rem'
-                    }} className="material-symbols-outlined">shopping_cart</span>
+                    <CartIcon className="material-symbols-outlined">shopping_cart</CartIcon>
                     <GoBack to='/shop'>
                             <FontAwesomeIcon icon={faArrowLeft} />
                             Go Back
@@ -77,6 +75,12 @@ const EmptyContainer = styledComponents.div `
     height: 55rem;
     margin-top: 4rem;
     margin-bottom: 15rem;
+    animation: ease-in-out 0.5s fadeIn;
+
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
 `
 
 const CheckoutContainer = styledComponents.div `
@@ -112,6 +116,23 @@ const ProceedBtn = styledComponents.button `
     &:hover {
         background-color: rgb(0, 0, 0, 0.9);
         transform: scale(1.1)
+    }
+`
+
+const CartIcon = styledComponents.span `
+    font-size: 5.5rem;
+    animation: 3s ease-in-out 0s infinite normal none running emptyCart;
+    
+    @keyframes emptyCart {
+        0%,
+        100% {
+            transform: rotate(10deg);
+            color: black;
+        }
+        50% {
+            transform: rotate(-10deg);
+            color: #f7c315;
+        }
     }
 `
 
