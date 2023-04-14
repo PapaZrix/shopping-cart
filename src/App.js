@@ -6,6 +6,7 @@ import Shop from './components/shop/Shop';
 import ItemView from './components/item/ItemView'
 import Cart from './components/cart/Cart'
 import Footer from './components/Footer'
+import ScrollToTop from './ScrollToTop'
 import db from './db/db'
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
   return (
     <Router>
       <Header cartQty={getQty} />
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop items={db} handleAddToCart={handleAddToCart} />} />
