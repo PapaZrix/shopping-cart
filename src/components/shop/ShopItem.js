@@ -29,6 +29,14 @@ const Item = styledComponents.div `
     border: 1px solid #e5e7eb;
     box-shadow: 0px 0px 10px 1px rgba(0 0 0 / 10%);
     border-radius: 0.75rem;
+
+    @media (max-width: 1024px) {
+        width: 35rem;
+    }
+
+    @media (max-width: 450px) {
+        width: 45rem;
+    }
 `
 
 const ItemTop = styledComponents.div `

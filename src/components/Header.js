@@ -40,6 +40,11 @@ const Container = styledComponents.div `
     max-width: 140rem;
     margin: 0 auto;
     padding: 3rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 4rem;
+    }
 `
 
 const ShopName = styledComponents.h1 `

@@ -14,7 +14,7 @@ const Cart = ({ items, changeQty, removeFromCart }) => {
                     </div>
                     <CheckoutContainer>
                         <CheckOut sum={items} />
-                        <ProceedBtn>PROCEED TO CHECKOUT</ProceedBtn>
+                        <ProceedBtn>CHECKOUT</ProceedBtn>
                         <GoBack to='/shop'>
                             <FontAwesomeIcon icon={faArrowLeft} />
                             Go Back
@@ -62,6 +62,10 @@ const Container = styledComponents.div `
     margin-bottom: 15rem;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 450px) {
+        width: 40rem;
+    }
 `
 
 const EmptyContainer = styledComponents.div `
@@ -81,12 +85,23 @@ const EmptyContainer = styledComponents.div `
         0% {opacity: 0;}
         100% {opacity: 1;}
     }
+
+    @media (max-width: 450px) {
+        width: 40rem;
+    }
 `
 
 const CheckoutContainer = styledComponents.div `
     max-width: 50%;
     margin: 0 auto;
     margin-top: 2.5rem;
+    display: flex; 
+    flex-direction: column;
+    justify-content; center;
+
+    @media (max-width: 450px) {
+        max-width: 100%;
+    }
 `
 
 const ProceedBtn = styledComponents.button `
@@ -95,17 +110,6 @@ const ProceedBtn = styledComponents.button `
     background-color: black;
     padding: 1rem;
     background-color: black;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    border: none;
-    transition: transform 0.15s ease-in-out 0s;
-    border-radius: 0.5rem;
-
-    &:hover {
-        background-color: rgb(0, 0, 0, 0.9);
-        transform: scale(1.1)
-    }
     color: white;
     cursor: pointer;
     font-weight: bold;

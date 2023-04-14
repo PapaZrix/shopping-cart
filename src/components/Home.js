@@ -22,28 +22,61 @@ const HomeDiv = styledComponents.div `
     align-items: center;
     margin-top: 7rem;
     margin-bottom: 20rem;
+
+    @media (max-width: 1024px) {
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        margin-top : 15rem;
+    }
 `
 const Hero = styledComponents.div `
     display: flex;
     flex-direction: column;
     width: 50rem;
     font-weight: bold;
+
+    @media (max-width: 1024px) {
+        align-items: center
+    }
 `
 
 const HeroTop = styledComponents.p `
     color: rgb(123, 123, 123);
     font-size: 2.2rem;
     text-transform: uppercase;
+
+    @media (max-width: 1024px) {
+        text-align: center;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
 `
 
 const HeroBottom = styledComponents.h1 `
     font-size: 6.2rem;
     line-height: 1.3;
+
+    @media (max-width: 1024px) {
+        text-align: center;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 5rem;
+    }
 `
 
 const HomeImg = styledComponents.img `
     width: 75rem;
     border-radius: 1.25rem;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 `
 
 const ShopNow = styledComponents(Link) `

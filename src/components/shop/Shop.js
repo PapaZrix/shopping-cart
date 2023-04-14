@@ -17,6 +17,11 @@ const ShopDiv = styledComponents.div `
     gap: 5rem;
     margin-top: 7rem;
     margin-bottom: 20rem;
+
+    @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 export default Shop

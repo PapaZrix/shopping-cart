@@ -17,7 +17,7 @@ const ItemView = ({ handleAddToCart }) => {
                     <ItemImg src={`https://cdn.shopify.com/s/files/1/0567/0567/9555/products/IASIP-${item.endpoint}`} alt={item.name}></ItemImg>
                 </ItemLeft>
                 <ItemRight>
-                    <p style={{fontSize: '3rem'}}>{item.name}</p>                   
+                    <p style={{fontSize: '3rem', fontWeight: 'bold'}}>{item.name}</p>                   
                     <p>${item.price}</p>
                     <AddToCartBtn onClick={handleAddToCart} value={item.id}>Add to cart</AddToCartBtn>
                     <GoBack to='/shop'>
@@ -37,6 +37,10 @@ const Item = styledComponents.div `
     gap: 5rem;
     margin-top: 4rem;
     margin-bottom: 15rem;
+
+    @media (max-width: 450px) {
+        flex-direction: column;
+    }
 `
 
 const ItemLeft = styledComponents.div `
@@ -45,6 +49,10 @@ const ItemLeft = styledComponents.div `
 
 const ItemImg = styledComponents.img `
     width: 50rem;
+
+    @media (max-width: 450px) {
+        width: 40rem;
+    }
 `
 
 const ItemRight = styledComponents.div `
@@ -54,6 +62,11 @@ const ItemRight = styledComponents.div `
     align-items: center;
     gap: 1rem;
     font-size: 2rem;
+
+    @media (max-width: 450px) {
+        font-size: 3rem;
+        width: 52rem;
+    }
 `
 
 const AddToCartBtn = styledComponents.button `
@@ -71,6 +84,11 @@ const AddToCartBtn = styledComponents.button `
     &:hover {
         background-color: rgb(0, 0, 0, 0.9);
         transform: scale(1.1)
+    }
+
+    @media (max-width: 450px) {
+        width: 50%;
+        font-size: 3rem;
     }
 `
 

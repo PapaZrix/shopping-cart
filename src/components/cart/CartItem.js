@@ -13,8 +13,8 @@ const CartItem = ({ item, changeQty, removeFromCart }) => {
             </Link>
             <ItemRight>
                 <ItemRightTop>
-                    <Link style={{fontSize: '3rem'}} to={`/shop/${item.id}`}>{item.name}</Link>
-                    <p>
+                    <Link style={{fontSize: '2.5rem', color: 'black', fontWeight: 'bold'}} to={`/shop/${item.id}`}>{item.name}</Link>
+                    <p style={{fontSize: '2rem'}}>
                         ${item.qty > 1 ? (item.price * item.qty).toFixed(2) : (item.price).toFixed(2) }
                     </p>
                 </ItemRightTop>
@@ -44,6 +44,10 @@ const Item = styledComponents.div `
     &:last-child {
         border-bottom: none;
     }
+
+    @media (max-width: 450px) {
+        gap: 0;
+    }
 `
 
 const ItemImg = styledComponents.img `
@@ -62,6 +66,11 @@ const ItemRightTop = styledComponents.div `
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    @media (max-width: 450px) {
+        flex-direction: column;
+        text-align: center;
+    }
 `
 
 const ItemRightBottom = styledComponents.div `
@@ -89,6 +98,10 @@ const Qty = styledComponents.p `
     border: 1px solid black;
     border-radius: 0.5rem;
     font-weight: bold;
+
+    @media (max-width: 450px) {
+        width: 8rem;
+    }
 `
 
 const ChangeQty = styledComponents.button `
