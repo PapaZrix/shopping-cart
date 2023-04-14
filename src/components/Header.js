@@ -29,6 +29,8 @@ const Header = ({ cartQty }) => {
 
 const HeaderTag = styledComponents.header `
     background-color: black;
+    position: sticky;
+    top: 0;
 `
 
 const Container = styledComponents.div `
