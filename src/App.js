@@ -29,6 +29,12 @@ const App = () => {
     )
   }
 
+  const removeFromCart = (id) => {
+    setCart(
+      cart.filter(item => item.id !== id)
+    )
+  }
+
   const getQty = cart.reduce((acc, curr) => acc + curr.qty, 0)
 
   return (
@@ -38,7 +44,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop items={db} handleAddToCart={handleAddToCart} />} />
         <Route path='/shop/:id' element={<ItemView handleAddToCart={handleAddToCart} />} />
-        <Route path='/cart' element={<Cart items={cart} />} />
+        <Route path='/cart' element={<Cart items={cart} changeQty={changeQty} removeFromCart={removeFromCart} />} />
       </Routes>
       <Footer />
     </Router>
